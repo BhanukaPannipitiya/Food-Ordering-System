@@ -1,0 +1,107 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.wrapper{
+    
+    padding: 1%;
+    width: 80%;
+    margin: 0 auto ;
+}
+.text-center
+{
+    text-align: center;
+
+}
+.clearfix{
+    float: none;
+    clear: both;
+}
+
+/*css for menu*/
+.menu{
+    text-align: center;
+    
+     
+}
+.menu ul{
+    list-style-type: none;
+}
+.menu ul li{
+    display: inline;
+    padding: 1%;
+}
+.menu ul li a{
+    text-decoration: none;
+    font-weight: bold;
+    color: #c56464;
+}
+.menu ul li a:hover{
+    color: #ff4757;
+}
+/*css for main content*/
+.main-content{
+    padding: 3% 0;
+    
+}
+.col-4 {
+    width:14%;
+    background-color: bisque;
+    margin: 1%;
+    padding: 2%;
+    float:left ;
+}
+.tbl-full{
+    width: 100%;
+}
+.tbl-30{
+    width: 30%;
+}
+table tr th{
+    border-bottom: 1px solid rgb(0, 0, 0);
+    padding: 1%;
+    text-align: left;
+}
+table tr td{
+    padding: 1%;
+}
+.btn-primary{
+    background-color:#4f73c0 ;
+    padding: 1%;
+    color: azure;
+    text-decoration: none;
+    font-weight: bold;
+
+}
+.btn-primary:hover{
+    background-color: #ff4757;
+}
+.btn-secondary{
+    background-color:#23837e ;
+    padding: 1%;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-weight: bold;
+
+}
+.btn-secondary:hover{
+    background-color: #368b5c;
+}
+.btn-danger{
+    background-color:#96342d ;
+    padding: 1%;
+    color: azure;
+    text-decoration: none;
+    font-weight: bold;
+
+}
+.btn-danger:hover{
+    background-color: #c0502e;
+}
+/* css for footer*/
+.footer{
+    background-color: rgb(11, 22, 32);
+    color: azure;
+}
