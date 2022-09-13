@@ -75,7 +75,7 @@
                         {
                             //Image available
                             ?>
-                            <img src="<?php echo SITEURL ?>images/food<?php echo $current_image; ?>" width="150px">
+                            <img src="<?php echo SITEURL ?>images<?php echo $current_image; ?>" width="150px">
                             <?php
                         }
                     ?>
@@ -197,7 +197,7 @@
 
                         // Get the source path and destination path
                         $src_path = $_FILES['image']['tmp_name']; //Source path 
-                        $dest_path = "../images/food/".$image_name; //Destination path
+                        $dest_path = "../images".$image_name; //Destination path
 
                         //Upload the image
                         $upload = move_uploaded_file($src_path, $dest_path);
@@ -218,7 +218,7 @@
                         {
                               //Current image is available
                               //Remove the image
-                              $remove_path = "../images/food/".$current_image;
+                              $remove_path = "../images".$current_image;
 
                               $remove = unlink($remove_path);
 

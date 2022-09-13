@@ -108,7 +108,7 @@
 
                 $source_path = $_FILES['image']['tmp_name'];
 
-                $destination_path = "../images/category/" . $image_name;
+                $destination_path = "../images" . $image_name;
 
                 //Finally upload the image
                 $upload = move_uploaded_file($source_path, $destination_path);
@@ -144,12 +144,12 @@
                 //Query executed and category added
                 $_SESSION['add'] = "<div class='success'> Category Added Successfully.</div>";
                 // Redirect to Manage cateogry page
-                header('location:' . SITEURL . 'Admin/manage-category.php');
+                header('location:'.SITEURL.'Admin/manage-category.php');
             } else {
                 //failed to add category
                 $_SESSION['add'] = "<div class='error'>Failed to add category.</div>";
                 // Redirect to Manage cateogry page
-                header('location:' . SITEURL . 'Admin/add-category.php');
+                header('location:'.SITEURL.'Admin/add-category.php');
             }
         }
         ?>

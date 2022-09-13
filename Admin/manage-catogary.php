@@ -14,16 +14,17 @@
 
 
 
-        ?> <br><br>
-        <a href="<?php echo SITEURL; ?>Admin/add-category.php" class="btn btn-primary">Add Category</a>
-
-
+        ?>
+        <br><br>
+        <a href="<?php echo SITEURL; ?>Admin/add-category.php" class="btn btn-primary">Add Catogary</a>
         <br> <br>
         <table class="tbl-full">
             <tr>
                 <th>S.N</th>
-                <th>Full Name</th>
-                <th>Username</th>
+                <th>Title</th>
+                <th>Image</th>
+                <th>Featured</th>
+                <th>Active</th>
                 <th>Actions</th>
             </tr>
 
@@ -52,6 +53,7 @@
                     $active = $row['active'];
 
             ?>
+
                     <tr>
                         <td><?php echo $sn++; ?></td>
                         <td><?php echo $title; ?></td>
@@ -109,36 +111,7 @@
 
 
 
-            <tr>
-                <td>1.</td>
-                <td>Bhanuka</td>
-                <td>Biwa</td>
-                <td>
-                    <a href="a" class="btn-secondary">Update Admin</a>
-                    <a href="a" class="btn-danger">Delete Admin</a>
-                </td>
-            </tr>
 
-
-            <tr>
-                <td>2.</td>
-                <td>Bhanuka</td>
-                <td>Biwa</td>
-                <td>
-                    <a href="a" class="btn-secondary">Update Admin</a>
-                    <a href="a" class="btn-danger">Delete Admin</a>
-                </td>
-            </tr>
-
-            <tr>
-                <td>3.</td>
-                <td>Bhanuka</td>
-                <td>Biwa</td>
-                <td>
-                    <a href="a" class="btn-secondary">Update Admin</a>
-                    <a href="a" class="btn-danger">Delete Admin</a>
-                </td>
-            </tr>
         </table>
 
     </div>
