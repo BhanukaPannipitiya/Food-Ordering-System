@@ -16,7 +16,7 @@
 
         ?>
         <br><br>
-        <a href="<?php echo SITEURL; ?>admin/add-category.php" class="btn btn-primary">Add Catogary</a>
+        <a href="<?php echo SITEURL; ?>Admin/add-category.php" class="btn btn-primary">Add Catogary</a>
         <br> <br>
         <table class="tbl-full">
             <tr>
@@ -30,7 +30,7 @@
 
             <?php
             //Query to get all categories from database
-            $sql = "SELECT * FROM tbl_category";
+            $sql = "SELECT * FROM tbl_catogary";
 
             //Execute the query
             $res = mysqli_query($conn, $sql);

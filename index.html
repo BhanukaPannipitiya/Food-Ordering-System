@@ -1,82 +1,239 @@
 <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- Important to make website responsive -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Website</title>
 
-<html>
-  <head>
-    <meta charset="utf-8" />
+    <!-- Link our CSS file -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
 
-    <title>Foods</title>
+<body>
+    <!-- Navbar Section Starts Here -->
+    <section class="navbar">
+        <div class="container">
+            <div class="logo">
+                <a href="#" title="Logo">
+                    <img src="images/logo.png" alt="Restaurant Logo" class="img-responsive">
+                </a>
+            </div>
 
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="css/style.css" />
+            <div class="menu text-right">
+                <ul>
+                    <li>
+                        <a href="index.html">Home</a>
+                    </li>
+                    <li>
+                        <a href="categories.html">Categories</a>
+                    </li>
+                    <li>
+                        <a href="foods.html">Foods</a>
+                    </li>
+                    <li>
+                        <a href="#">Contact</a>
+                    </li>
+                </ul>
+            </div>
 
-    <!-- Font Link-->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
-    />
-  </head>
-  <body>
-    <header>
-      <a href="#" class="logo"><i class="fas fa-utensils"></i> food </a>
-
-      <div id="menu-bar" class="fas fa-bars"></div>
-
-      <nav class="navbar">
-        <a href="#home"> Home </a>
-        <a href="#speciality"> Speciality </a>
-        <a href="#popular"> popular </a>
-        <a href="#review"> review </a>
-        <a href="#order"> order </a>
-      </nav>
-    </header>
-
-    <!--Home section starts-->
-
-    <section class="home" id="home">
-      <div class="content">
-        <h3>Food Made with Love</h3>
-        <p>
-          Cooking is like love.Is should be entered into with abandon or not at
-          all.Food, in the end, in our own tradition, is something holy. It’s
-          not about nutrients and calories. It’s about sharing. It’s about
-          honesty. It’s about identity.
-        </p>
-        <a href="#" class="btn"> Order Now</a>
-      </div>
-
-      <div class="image">
-        <img src="images/home-img.png" alt="" />
-      </div>
-    </section>
-
-    <!--Home section ends-->
-
-    <!--Speciality section starts-->
-
-    <section class="speciality" id="speciality">
-      <h1 class="heading">Our <span>speciality</span></h1>
-
-      <div class="box-container">
-        <div class="box">
-          <img class="image" src="images/s-img-1.jpg" alt="" />
-          <div class="content">
-            <img src="images/s-1.png" alt="" />
-            <h3>tasty burger</h3>
-            <p>
-              oijdfoiahf 0uah0fuhaodiufhoaidh
-              oihufdaiudhf0wufhoiudashfaoihfoiauhfoiafoihosduifasdhfoiasodfhoajskjncaknxkfhaoidshfiuwfeiuwyrouwhohdood
-              oiasiuh soiudhoaiuho iuaheoryweyruwhfiahsdofiuhsodi
-              uhiufhwiueaiuhfo aiuhdf
-              iuahfiuhdoihfrarhfoiuahoduhfaoidhfaorwiuoaiwuhfoiasofasodifau
-            </p>
-          </div>
+            <div class="clearfix"></div>
         </div>
-      </div>
     </section>
+    <!-- Navbar Section Ends Here -->
 
-    <!--Speciality section ends-->
+    <!-- fOOD sEARCH Section Starts Here -->
+    <section class="food-search text-center">
+        <div class="container">
+            
+            <form action="food-search.html" method="POST">
+                <input type="search" name="search" placeholder="Search for Food.." required>
+                <input type="submit" name="submit" value="Search" class="btn btn-primary">
+            </form>
 
-    <!-- JS file Link-->
-    <script src="js/script.js"></script>
-  </body>
+        </div>
+    </section>
+    <!-- fOOD sEARCH Section Ends Here -->
+
+    <!-- CAtegories Section Starts Here -->
+    <section class="categories">
+        <div class="container">
+            <h2 class="text-center">Explore Foods</h2>
+
+            <a href="category-foods.html">
+            <div class="box-3 float-container">
+                <img src="images/pizza.jpg" alt="Pizza" class="img-responsive img-curve">
+
+                <h3 class="float-text text-white">Pizza</h3>
+            </div>
+            </a>
+
+            <a href="#">
+            <div class="box-3 float-container">
+                <img src="images/burger.jpg" alt="Burger" class="img-responsive img-curve">
+
+                <h3 class="float-text text-white">Burger</h3>
+            </div>
+            </a>
+
+            <a href="#">
+            <div class="box-3 float-container">
+                <img src="images/momo.jpg" alt="Momo" class="img-responsive img-curve">
+
+                <h3 class="float-text text-white">Momo</h3>
+            </div>
+            </a>
+
+            <div class="clearfix"></div>
+        </div>
+    </section>
+    <!-- Categories Section Ends Here -->
+
+    <!-- fOOD MEnu Section Starts Here -->
+    <section class="food-menu">
+        <div class="container">
+            <h2 class="text-center">Food Menu</h2>
+
+            <div class="food-menu-box">
+                <div class="food-menu-img">
+                    <img src="images/menu-pizza.jpg" alt="Chicke Hawain Pizza" class="img-responsive img-curve">
+                </div>
+
+                <div class="food-menu-desc">
+                    <h4>Food Title</h4>
+                    <p class="food-price">$2.3</p>
+                    <p class="food-detail">
+                        Made with Italian Sauce, Chicken, and organice vegetables.
+                    </p>
+                    <br>
+
+                    <a href="order.html" class="btn btn-primary">Order Now</a>
+                </div>
+            </div>
+
+            <div class="food-menu-box">
+                <div class="food-menu-img">
+                    <img src="images/menu-burger.jpg" alt="Chicke Hawain Pizza" class="img-responsive img-curve">
+                </div>
+
+                <div class="food-menu-desc">
+                    <h4>Smoky Burger</h4>
+                    <p class="food-price">$2.3</p>
+                    <p class="food-detail">
+                        Made with Italian Sauce, Chicken, and organice vegetables.
+                    </p>
+                    <br>
+
+                    <a href="#" class="btn btn-primary">Order Now</a>
+                </div>
+            </div>
+
+            <div class="food-menu-box">
+                <div class="food-menu-img">
+                    <img src="images/menu-burger.jpg" alt="Chicke Hawain Burger" class="img-responsive img-curve">
+                </div>
+
+                <div class="food-menu-desc">
+                    <h4>Nice Burger</h4>
+                    <p class="food-price">$2.3</p>
+                    <p class="food-detail">
+                        Made with Italian Sauce, Chicken, and organice vegetables.
+                    </p>
+                    <br>
+
+                    <a href="#" class="btn btn-primary">Order Now</a>
+                </div>
+            </div>
+
+            <div class="food-menu-box">
+                <div class="food-menu-img">
+                    <img src="images/menu-pizza.jpg" alt="Chicke Hawain Pizza" class="img-responsive img-curve">
+                </div>
+
+                <div class="food-menu-desc">
+                    <h4>Food Title</h4>
+                    <p class="food-price">$2.3</p>
+                    <p class="food-detail">
+                        Made with Italian Sauce, Chicken, and organice vegetables.
+                    </p>
+                    <br>
+
+                    <a href="#" class="btn btn-primary">Order Now</a>
+                </div>
+            </div>
+
+            <div class="food-menu-box">
+                <div class="food-menu-img">
+                    <img src="images/menu-pizza.jpg" alt="Chicke Hawain Pizza" class="img-responsive img-curve">
+                </div>
+
+                <div class="food-menu-desc">
+                    <h4>Food Title</h4>
+                    <p class="food-price">$2.3</p>
+                    <p class="food-detail">
+                        Made with Italian Sauce, Chicken, and organice vegetables.
+                    </p>
+                    <br>
+
+                    <a href="#" class="btn btn-primary">Order Now</a>
+                </div>
+            </div>
+
+            <div class="food-menu-box">
+                <div class="food-menu-img">
+                    <img src="images/menu-momo.jpg" alt="Chicke Hawain Momo" class="img-responsive img-curve">
+                </div>
+
+                <div class="food-menu-desc">
+                    <h4>Chicken Steam Momo</h4>
+                    <p class="food-price">$2.3</p>
+                    <p class="food-detail">
+                        Made with Italian Sauce, Chicken, and organice vegetables.
+                    </p>
+                    <br>
+
+                    <a href="#" class="btn btn-primary">Order Now</a>
+                </div>
+            </div>
+
+
+            <div class="clearfix"></div>
+
+            
+
+        </div>
+
+        <p class="text-center">
+            <a href="#">See All Foods</a>
+        </p>
+    </section>
+    <!-- fOOD Menu Section Ends Here -->
+
+    <!-- social Section Starts Here -->
+    <section class="social">
+        <div class="container text-center">
+            <ul>
+                <li>
+                    <a href="#"><img src="https://img.icons8.com/fluent/50/000000/facebook-new.png"/></a>
+                </li>
+                <li>
+                    <a href="#"><img src="https://img.icons8.com/fluent/48/000000/instagram-new.png"/></a>
+                </li>
+                <li>
+                    <a href="#"><img src="https://img.icons8.com/fluent/48/000000/twitter.png"/></a>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <!-- social Section Ends Here -->
+
+    <!-- footer Section Starts Here -->
+    <section class="footer">
+        <div class="container text-center">
+            <p>All rights reserved. Designed By <a href="#">Vijay Thapa</a></p>
+        </div>
+    </section>
+    <!-- footer Section Ends Here -->
+
+</body>
 </html>

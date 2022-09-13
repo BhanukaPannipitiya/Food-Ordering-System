@@ -111,7 +111,7 @@ fieldset{
 
 .food-search{
     background-image: url(../images/bg.jpg);
-    background-size:auto;
+    background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     padding: 7% 0;
@@ -184,7 +184,7 @@ fieldset{
 
 /* for Order Section */
 .order{
-    background-size: auto;
+    width: 50%;
     margin: 0 auto;
 }
 .input-responsive{

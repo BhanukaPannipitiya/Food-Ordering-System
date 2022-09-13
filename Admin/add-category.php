@@ -52,7 +52,7 @@
                 <tr>
                     <td>Active: </td>
                     <td>
-                        <input type="radio" name="active" value=Yes"> Yes
+                        <input type="radio" name="active" value="Yes"> Yes
                         <input type="radio" name="active" value="No"> No
                     </td>
 
@@ -104,7 +104,7 @@
                 $ext = end(explode('.', $image_name));
 
                 //Rename the image 
-                $image_name = "Food_Category_" . rand(000, 999) . '.' . $ext; //e.g. Food_Category_834.jpg
+                $image_name = "Food_Category".rand(000, 999).'.'.$ext; //e.g. Food_Category_834.jpg
 
                 $source_path = $_FILES['image']['tmp_name'];
 
@@ -119,7 +119,7 @@
                     //set message
                     $_SESSION['upload'] = "<div class= 'error'> Failed to upload image.</div>";
                     //redirect to add categort page
-                    header('location:' . SITEURL . 'admin/add-category.php');
+                    header('location:'.SITEURL.'Admin/add-category.php');
                     //Stop the process
                     die();
                 }
@@ -129,7 +129,7 @@
             }
 
             //2.Create  SQL querry to insert category into database
-            $sql = "INSERT INTO tbl_category SET
+            $sql = "INSERT INTO tbl_catogary SET
             title = '$title',
             image_name = '$image_name',
             featured = '$featured',
@@ -144,12 +144,12 @@
                 //Query executed and category added
                 $_SESSION['add'] = "<div class='success'> Category Added Successfully.</div>";
                 // Redirect to Manage cateogry page
-                header('location:' . SITEURL . 'admin/manage-category.php');
+                header('location:' . SITEURL . 'Admin/manage-category.php');
             } else {
                 //failed to add category
                 $_SESSION['add'] = "<div class='error'>Failed to add category.</div>";
                 // Redirect to Manage cateogry page
-                header('location:' . SITEURL . 'admin/add-category.php');
+                header('location:' . SITEURL . 'Admin/add-category.php');
             }
         }
         ?>
@@ -159,4 +159,3 @@
     </div>
 </div>
 
-<?php include('partials/menu.php'); ?>
