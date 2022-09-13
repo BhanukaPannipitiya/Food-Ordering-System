@@ -1,4 +1,4 @@
-<?php include('partials/menu.php') ?>
+<?php include('partials/menu.php'); ?>
 
 <!-- Main Content section starts -->
 <div class="main-content">
@@ -10,6 +10,27 @@
             echo $_SESSION['add'];
             unset($_SESSION['add']);
         }
+        if (isset($_SESSION['delete'])) {
+            echo $_SESSION['delete'];
+            unset($_SESSION['delete']);
+        }
+        if (isset($_SESSION['update'])) {
+            echo $_SESSION['update'];
+            unset($_SESSION['update']);
+        }
+        if (isset($_SESSION['user-not-found'])) {
+            echo $_SESSION['user-not-found'];
+            unset($_SESSION['user-not-found']);
+        }
+        if (isset($_SESSION['pwd-not-found'])) {
+            echo $_SESSION['pwd-not-found'];
+            unset($_SESSION['pwd-not-found']);
+        }
+        if (isset($_SESSION['change-pwd'])) {
+            echo $_SESSION['change-pwd'];
+            unset($_SESSION['change-pwd']);
+        }
+
         ?>
         <br><br>
         <a href="add-admin.php" class="btn-primary">Add Admin</a>
@@ -47,8 +68,9 @@
                             <td><?php echo $full_name; ?></td>
                             <td><?php echo $username; ?></td>
                             <td>
-                                <a href="a" class="btn-secondary">Update Admin</a>
-                                <a href="<?php echo SITEURL; ?>Admin/delete-admin.php" class="btn-danger">Delete Admin</a>
+                                <a href="<?php echo SITEURL; ?>Admin/update-password.php?id=<?php echo $id; ?>" class="btn-primary">Change Password</a>
+                                <a href="<?php echo SITEURL; ?>Admin/update-admin.php?id=<?php echo $id; ?>" class="btn-secondary">Update Admin</a>
+                                <a href="<?php echo SITEURL; ?>Admin/delete-admin.php?id=<?php echo $id; ?>" class="btn-danger">Delete Admin</a>
                             </td>
                         </tr>
             <?php
