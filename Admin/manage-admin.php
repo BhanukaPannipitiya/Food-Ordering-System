@@ -3,7 +3,7 @@
 <!-- Main Content section starts -->
 <div class="main-content">
     <div class="wrapper">
-        <h1>Manage Adimin</h1>
+        <h1>Manage Admin</h1>
         <br> <br>
         <?php
         if (isset($_SESSION['add'])) {
