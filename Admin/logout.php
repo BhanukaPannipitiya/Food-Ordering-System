@@ -8,4 +8,4 @@ session_destroy();
 
 
 //2.Redirect to login page
-header('location:' . SITEURL . 'admin/login.php');
+header('location:' . SITEURL . 'Admin/login.php');

@@ -13,7 +13,7 @@
         $res2 = mysqli_query($conn, $sql2);
 
         //Gwt the value based on query executed
-        $row = mysqli_fetch_assoc($res2);
+        $row2 = mysqli_fetch_assoc($res2);
 
         //Get the individual values of selected food
         $title = $row2['title'];
@@ -27,7 +27,7 @@
     else
     {
         //Redirect to Manage Food
-        header('location:'.SITEURL.'Admin/manage-food.php')
+        header('location:'.SITEURL.'Admin/manage-food.php');
     }
 ?>
 
@@ -96,11 +96,11 @@
 
                         <?php
                             //Query to Get Active Categories
-                            $sql = "SELECT * FROM tbl_category WHERE active='yes'";
+                            $sql = "SELECT * FROM tbl_catogary WHERE active='yes'";
                             //Execute the Query
-                            $res = mysqli_query($conn, $sql)
+                            $res = mysqli_query($conn, $sql);
                             //Count Rows
-                            $count = mysqli_num_rows($res)
+                            $count = mysqli_num_rows($res);
 
                             //Check whether category available or not
                             if($count>0)
@@ -113,7 +113,7 @@
                                     
                                     //echo "<option value='$category_id'>$category_title</option>";
                                     ?>
-                                    <option <?php if($current_category==$category_id) {echo "selected"} ?> value="<?php echo $category_id; ?>"><?php echo $category_title; ?></option>
+                                    <option <?php if($current_category==$category_id) {echo "selected";} ?> value="<?php echo $category_id; ?>"><?php echo $category_title; ?></option>
                                     <?php
                                     
                                 }
@@ -151,7 +151,7 @@
                     <input type="hidden" name="id" value="<?php echo $id; ?>">
                     <input type="hidden" name="current_image" value="<?php echo $current_image; ?>">
 
-                    <input type="submit" name="submit" value="Update Food" class="btn-secondary">
+                   <input type="submit"  name="submit" value="Update Food" class="btn-secondary">
                 </td>
             </tr>
 
@@ -161,7 +161,7 @@
 
         <?php
         
-            if(isset($_POST=['submit']))
+            if(isset($_POST['submit']))
             {
                 //echo "Button clicked";
 
@@ -179,7 +179,7 @@
                 //2. Upload the image if selected
 
                 //Check whether upload button is clicked or not
-                id(isset($_FILES['image']['name']))
+                if(isset($_FILES['image']['name']))
                 {
                     //Upload button clicked
                     $image_name = $_FILES['image']['name']; //New image name
@@ -223,12 +223,12 @@
                               $remove = unlink($remove_path);
 
                               //Check whether the image is removed or not
-                              id($remove==false)
+                              if($remove==false)
                               {
                                     //Failed ti remove current image
-                                    $_SESSION['remove-failed'] = "<div class='error'>Failed to remove current image</div>"
+                                    $_SESSION['remove-failed'] = "<div class='error'>Failed to remove current image</div>";
                                     //redirect to manage food
-                                    header('location:'.SITEURL.'Admin/manage-food.php')
+                                    header('location:'.SITEURL.'Admin/manage-food.php');
                                     //stop the process
                                     die();
                               }
