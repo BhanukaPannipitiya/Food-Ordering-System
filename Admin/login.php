@@ -57,6 +57,7 @@
 
 //Check whether the submit button is clicked or not
 
+
 if (isset($_POST['submit'])) {
     //process for login 
     //1.Get the data from log in from
@@ -64,7 +65,7 @@ if (isset($_POST['submit'])) {
     $password = md5($_POST['password']);
 
     //2.SQL to check whther the username and password are exists or not
-    $sql = "SELECT * FROM tbl_admin WHERE username = '$username' AND password = '$password";
+    $sql = "SELECT * FROM tbl_admin WHERE username = '$username' AND password = '$password'";
 
     //3.execute the querry
     $res = mysqli_query($conn, $sql);
@@ -74,19 +75,19 @@ if (isset($_POST['submit'])) {
 
     if ($count == 1) {
         //user available and login success
-        $_SESSION['login'] = "<div class='Success'>Login Successful.</div>";
-        $_SESSION['user'] = $username; //to check whether the user logged in or not and logout will unset it
+        $_SESSION['login'] = "<div class='success'>Login Successful.</div>";
+        //$_SESSION['user'] = $username; //to check whether the user logged in or not and logout will unset it
         // Redirect to home page 
-        header('location:' . SITEURL . 'admin/');
+        header('location:' . SITEURL . 'Admin/');
     } else {
         //User not available and login failure
         $_SESSION['login'] = "<div class='error text-center'>Username or password didnot match.</div>";
         // Redirect to home page 
-        header('location:' . SITEURL . 'admin/login.php');
+        header('location:' . SITEURL . 'Admin/login.php');
     }
 }
 
 
 
 
-?>
+?> 
