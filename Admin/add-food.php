@@ -43,7 +43,7 @@
                         <select name="category">
                             <?php 
                                 //create php code to display catogaries from database
-                                $sql = "SELECT * FROM tbl_catogary WHERE active='yes'";
+                                $sql = "SELECT * FROM tbl_catogary WHERE active='Yes'";
 
                                 $res = mysqli_query($conn ,$sql);
 
@@ -51,7 +51,7 @@
 
                                 if($count>0)
                                 {
-                                    while($row = mysqli_fetch_assoc($res0))
+                                    while($row = mysqli_fetch_assoc($res))
                                     {
                                         $id = $row['id'];
                                         $title = $row['title'];
@@ -70,9 +70,7 @@
 
 
                             ?>
-                            <option value="1">Food</option>
-                            <option value="1">Snacks</option>
-                            <option value="1">Burgers</option>
+                            
                         </select>
                     </td>
                 </tr>
@@ -138,7 +136,7 @@
 
                         $src =$_FILES['image']['tmp_name'];
 
-                        $dst = "../images/food/".$image_name;
+                        $dst = "/images".$image_name;
 
                         $upload = move_uploaded_file($src , $dst);
 

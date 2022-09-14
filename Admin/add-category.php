@@ -109,7 +109,11 @@
                     $image_name = "Food_Category" . rand(000, 999) . '.' . $ext; //e.g. Food_Category_834.jpg
 
 
+<<<<<<< HEAD
                     $source_path = $_FILES['image']['tmp_name'];
+=======
+                $destination_path = "../images" . $image_name;
+>>>>>>> abe7044e9c35e64dc80cc7769b5ec5f53c7b9023
 
                     $destination_path = "../images/category/" . $image_name;
 
@@ -148,12 +152,12 @@
                 //Query executed and category added
                 $_SESSION['add'] = "<div class='success'> Category Added Successfully.</div>";
                 // Redirect to Manage cateogry page
-                header('location:' . SITEURL . 'Admin/manage-category.php');
+                header('location:'.SITEURL.'Admin/manage-category.php');
             } else {
                 //failed to add category
                 $_SESSION['add'] = "<div class='error'>Failed to add category.</div>";
                 // Redirect to Manage cateogry page
-                header('location:' . SITEURL . 'Admin/add-category.php');
+                header('location:'.SITEURL.'Admin/add-category.php');
             }
         }
         ?>
